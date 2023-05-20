@@ -1,0 +1,130 @@
+{
+  "PTERODACTYL": {
+    "ADDRESS": "https://panel.example.com",
+    "API_KEY": "PTERODACTYL API KEY"
+  },
+
+  "EXTRAS": {
+    "FORCE_WIPE_CRON": "0 14 * * 4#1",
+    "FORCE_WIPE_TIMEZONE": "America/New_York",
+    "IGNORE_WIPE_WHEN_DAYS_WITHIN_FORCE": 2
+  },
+
+  "INSTANCES": [
+    {
+      "SERVERS": ["PTERODACTYL SERVER ID"],
+
+      "WIPES": [
+        {
+          "CRON": "0 15 * * TUE,FRI",
+          "TIMEZONE": "America/New_York",
+          "BLUEPRINTS": false,
+          "MAP": {
+            "ENABLED": true,
+            "MODE": "procedural",
+
+            "PROCEDURAL": {
+              "RANDOMSEED": true,
+              "SEED": "123456",
+              "SIZE": 3500
+            },
+
+            "CUSTOM": {
+              "URL_LIST": ["MAP URL 1", "MAP URL 2"]
+            }
+          },
+          "EXTRA_FILES": [
+            {
+              "PATH": "/oxide/data",
+              "FILES": ["Economics.json"]
+            }
+          ]
+        }
+      ],
+
+      "FORCE_WIPE": {
+        "MAP": {
+          "ENABLED": true,
+          "MODE": "custom",
+
+          "PROCEDURAL": {
+            "RANDOMSEED": true,
+            "SEED": "",
+            "SIZE": 3500
+          },
+
+          "CUSTOM": {
+            "URL_LIST": ["MAP URL 1", "MAP URL 2"]
+          }
+        },
+        "EXTRA_FILES": [
+          {
+            "PATH": "/oxide/data",
+            "FILES": ["Economics.json"]
+          }
+        ]
+      }
+    },
+
+    {
+      "SERVERS": ["PTERODACTYL SERVER ID"],
+
+      "WIPES": [
+        {
+          "CRON": "0 15 * * TUE,FRI",
+          "TIMEZONE": "Europe/Paris",
+          "BLUEPRINTS": false,
+          "MAP": {
+            "ENABLED": true,
+            "MODE": "custom",
+
+            "PROCEDURAL": {
+              "RANDOMSEED": true,
+              "SEED": "123456",
+              "SIZE": 3500
+            },
+
+            "CUSTOM": {
+              "URL_LIST": [
+                "MAP URL 1",
+                "MAP URL 2",
+                "MAP URL 3",
+                "MAP URL 4",
+                "MAP URL 5"
+              ]
+            }
+          },
+          "EXTRA_FILES": [
+            {
+              "PATH": "/oxide/data",
+              "FILES": ["Economics.json"]
+            }
+          ]
+        }
+      ],
+
+      "FORCE_WIPE": {
+        "MAP": {
+          "ENABLED": true,
+          "MODE": "custom",
+
+          "PROCEDURAL": {
+            "RANDOMSEED": true,
+            "SEED": "",
+            "SIZE": 3500
+          },
+
+          "CUSTOM": {
+            "URL_LIST": ["MAP URL 1", "MAP URL 2"]
+          }
+        },
+        "EXTRA_FILES": [
+          {
+            "PATH": "/oxide/data",
+            "FILES": ["Economics.json"]
+          }
+        ]
+      }
+    }
+  ]
+}
